@@ -26,7 +26,7 @@ public class GatewaySecurityConfig {
                 .route("user-account-service", r -> r.path("/api/auth/**", "/api/users/**", "/api/accounts/**")
                         .uri("lb://USER-ACCOUNT-SERVICE")
                 )
-                .route("transaction-service", r -> r.path("/api/transaction/**")
+                .route("transaction-service", r -> r.path("/api/transactions/**")
                         .uri("lb://TRANSACTION-SERVICE")
                 )
                 .build();
